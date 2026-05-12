@@ -181,7 +181,7 @@ tr.top td.name{color:var(--good);font-weight:600}
 .fk-note{margin-top:10px;padding-top:8px;border-top:1px solid var(--hair);font-size:11px;color:var(--muted);line-height:1.5}
 .fk-note b{color:var(--ink);font-weight:500}
 
-/* ============ FALKON SEGUNDO ============ */
+/* ============ MTA SEGUNDO (legacy list) ============ */
 .fs-cat{margin-bottom:18px}
 .fs-cat-h{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0 10px;border-bottom:1px solid var(--ink-2);margin-bottom:10px}
 .fs-cat-h h4{font-size:15.5px;font-weight:600;letter-spacing:-.2px}
@@ -191,6 +191,73 @@ tr.top td.name{color:var(--good);font-weight:600}
 .fs-it .it-l{color:var(--ink-2);line-height:1.4;flex:1}
 .fs-it .it-l b{color:var(--ink);font-weight:600}
 .fs-it .it-w{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--info);letter-spacing:.06em;font-weight:500;white-space:nowrap}
+
+/* ============ MTA STATS ============ */
+.mta-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:28px}
+.mta-st{background:var(--surface);padding:20px 22px 18px}
+.mta-st .lbl{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:500}
+.mta-st .v{font-size:32px;font-weight:600;line-height:1;letter-spacing:-1.2px}
+.mta-st .v.crit{color:var(--crit)}
+.mta-st .v.warn{color:var(--warn)}
+.mta-st .v.good{color:var(--good)}
+.mta-st .v.info{color:var(--info)}
+.mta-st .ctx{margin-top:8px;font-size:11.5px;color:var(--muted);line-height:1.45}
+.mta-st .ctx b{color:var(--ink);font-weight:500}
+
+/* ============ MTA SUB-H ============ */
+.mta-h{font-size:13px;font-weight:600;margin:8px 0 14px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+
+/* ============ MTA TIMELINE ============ */
+.mta-tl{background:var(--surface);border:1px solid var(--border);margin-bottom:24px}
+.mt-row{display:grid;grid-template-columns:80px 1fr 170px 160px;gap:18px;padding:13px 22px;border-bottom:1px solid var(--hair);align-items:center}
+.mt-row:last-child{border-bottom:0}
+.mt-row.mt-past{background:#FBF9F2}
+.mt-row.mt-past .mt-date .d{color:var(--soft)}
+.mt-row.mt-past .mt-tn{color:var(--ink-2)}
+.mt-row.mt-now{background:var(--crit-bg);border-left:2px solid var(--crit)}
+.mt-date{display:flex;flex-direction:column;align-items:flex-start}
+.mt-date .d{font-size:26px;font-weight:600;line-height:1;letter-spacing:-1px;color:var(--ink)}
+.mt-date .m{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.06em;margin-top:3px}
+.mt-task .mt-tn{font-size:13.5px;font-weight:500;color:var(--ink);margin-bottom:5px;letter-spacing:-.1px;line-height:1.25}
+.mt-area{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;padding:2px 7px}
+.area-sd{background:#E5E5EE;color:#5C5C82}
+.area-ed{background:#F5EFD0;color:#9C7C1E}
+.area-tc{background:#FBE0CB;color:#A45525}
+.area-bc{background:var(--crit-bg);color:var(--crit)}
+.area-tp{background:var(--good-bg);color:var(--good)}
+.area-cm{background:#F4DDE8;color:#A93366}
+.area-in{background:#F3EDDA;color:#7E6722}
+.area-bm{background:#EBDDF0;color:#7A3E92}
+.mt-who{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-2);letter-spacing:.02em}
+.mt-status{text-align:right}
+
+/* ============ MTA ANALYSIS ============ */
+.mta-analysis{background:var(--surface);border:1px solid var(--border);padding:22px 28px;margin-top:8px}
+.mta-analysis h3{font-size:17px;font-weight:600;letter-spacing:-.3px;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid var(--hair)}
+.ana-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-bottom:8px}
+.ana .ana-lbl{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500;margin-bottom:8px}
+.ana .ana-v{font-size:22px;font-weight:600;letter-spacing:-.5px;line-height:1;margin-bottom:8px}
+.ana .ana-bar{height:6px;background:var(--hair);position:relative;margin-bottom:6px}
+.ana .ana-fl{height:100%;background:var(--good)}
+.ana .ana-fl.warn{background:var(--warn)}
+.ana .ana-fl.crit{background:var(--crit)}
+.ana .ana-pct{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.06em}
+.ana .ana-ctx{font-size:11.5px;color:var(--muted);line-height:1.45;margin-top:2px}
+.ana-rows{display:flex;flex-direction:column;gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:8px}
+.ana-row{background:var(--surface);padding:14px 18px;display:grid;grid-template-columns:260px 50px 1fr;gap:18px;align-items:center}
+.ana-row .ana-lab{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:500}
+.ana-row .ana-v{font-size:22px;font-weight:600;letter-spacing:-.5px;text-align:center;font-variant-numeric:tabular-nums}
+.ana-row .ana-list{font-size:12px;color:var(--ink-2);line-height:1.45}
+.ana-row.good{border-left:3px solid var(--good)}
+.ana-row.good .ana-lab,.ana-row.good .ana-v{color:var(--good)}
+.ana-row.info{border-left:3px solid var(--info)}
+.ana-row.info .ana-lab,.ana-row.info .ana-v{color:var(--info)}
+.ana-row.warn{border-left:3px solid var(--warn)}
+.ana-row.warn .ana-lab,.ana-row.warn .ana-v{color:var(--warn)}
+.ana-row.crit{border-left:3px solid var(--crit)}
+.ana-row.crit .ana-lab,.ana-row.crit .ana-v{color:var(--crit)}
+.ana-note{margin-top:14px;padding-top:14px;border-top:1px solid var(--hair);font-size:12px;color:var(--muted);line-height:1.6}
+.ana-note b{color:var(--ink);font-weight:600}
 
 /* ============ SWOT ============ */
 .swot{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--border);border:1px solid var(--border)}
@@ -239,9 +306,9 @@ footer b{color:var(--ink);font-weight:500}
     <div class="brand-name">RIVIA<span>Análisis actual</span></div>
   </div>
   <div class="meta">
-    <b>5 mayo 2026</b><br>
-    Strategy Day · punto 03<br>
-    Horizonte sept 2026 → ene 2027
+    <b>13 mayo 2026</b><br>
+    Pre-work Strategy Day · 14 may<br>
+    Cierre MTA · 31 may · Eval 3-5 jun
   </div>
 </header>
 
@@ -256,7 +323,7 @@ footer b{color:var(--ink);font-weight:500}
   </div>
   <div>
     <p class="lede">
-      Diagnóstico integral del equipo a 27 días del cierre del 3<sup>er</sup> curso de LEINN. Cruza el plan estratégico interno (16 puntos del Falkon III), la deuda académica del Falkon Segundo, la realidad financiera y el cronograma comprometido para mayo.
+      Diagnóstico integral del equipo a 18 días del cierre de indicadores MTA (31-may) y a 21 días de las evaluaciones (3-5 jun). Cruza el plan estratégico interno (MTA Model Tercero), la deuda académica (MTA Model Segundo), la realidad financiera y el cronograma comprometido para mayo.
     </p>
   </div>
 </div>
@@ -266,7 +333,7 @@ footer b{color:var(--ink);font-weight:500}
   <div class="s-head">
     <span class="s-num">01</span>
     <h2 class="s-title">Snapshot — <em>la foto fija de hoy</em></h2>
-    <span class="s-aside">14 personas activas<br>27 días al cierre</span>
+    <span class="s-aside">14 personas activas<br>18 días al cierre MTA</span>
   </div>
 
   <div class="kpi">
@@ -580,265 +647,391 @@ footer b{color:var(--ink);font-weight:500}
   </div>
 </section>
 
-<!-- ===== 06 FALKON III ===== -->
+<!-- ===== 06 MTA MODEL SEGUNDO ===== -->
 <section>
   <div class="s-head">
     <span class="s-num">06</span>
-    <h2 class="s-title">Falkon III — <em>indicadores MTA · 3<sup>er</sup> año</em></h2>
-    <span class="s-aside">16 puntos · cierre 31 mayo<br>3 retrasados · 9 en proceso</span>
+    <h2 class="s-title">MTA Model Segundo — <em>deuda académica del 2º curso</em></h2>
+    <span class="s-aside">Sprint 13-may → 31-may<br>Eval 3-5 jun · MIRO</span>
   </div>
 
-  <h3 style="font-size:13px;font-weight:600;margin-bottom:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">A · Liderazgo y aprendizaje</h3>
-  <div class="fk-grid" style="margin-bottom:24px">
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Self Driven Learning III</h4><div class="fk-lead">Lead TL · <b>Nerea / Iker</b></div></div>
-        <span class="tag tag-crit">Retrasado</span>
-      </div>
-      <div class="fk-task"><span>Portfolio profesional individual</span><span class="tag tag-crit">Retrasado</span></div>
-      <div class="fk-task"><span>120 LP aplicados a proyectos</span><span class="tag tag-warn">Proceso</span></div>
-      <div class="fk-task"><span>Individual Learning Contract reenfocado</span><span class="tag tag-crit">Retrasado</span></div>
-      <div class="fk-note">Media <b>109 BP</b>. Top: Jazha 126, Andreas 122, Felipe 117. ILC se rehará tras Strategy Day.</div>
+  <!-- Stats overview -->
+  <div class="mta-stats">
+    <div class="mta-st">
+      <div class="lbl">Días al cierre</div>
+      <div class="v warn">18</div>
+      <div class="ctx">13-may → <b>31-may</b></div>
     </div>
-
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Cooperative Leadership III</h4><div class="fk-lead">Lead TL · <b>Irati / Oier</b></div></div>
-        <span class="tag tag-crit">En peligro</span>
-      </div>
-      <div class="fk-task"><span>Objetivos proyecto ↔ visión empresa</span><span class="tag tag-warn">Peligro</span></div>
-      <div class="fk-task"><span>Cada miembro lidera un proceso</span><span class="tag tag-crit">Retrasado</span></div>
-      <div class="fk-task"><span>Reflexión evolución de liderazgos</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-note">Herramienta común optimizada. Planning de liderazgo por persona <b>cerrado en Korea</b>.</div>
+    <div class="mta-st">
+      <div class="lbl">Training restantes</div>
+      <div class="v">5</div>
+      <div class="ctx">14·19·21·26·28 · <b>única ventana</b> ejecución</div>
     </div>
-
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Team Community Learning III</h4><div class="fk-lead">Lead TL · <b>Kamu / Eli</b></div></div>
-        <span class="tag tag-warn">Proceso</span>
-      </div>
-      <div class="fk-task"><span>Repositorio Drive presentado al equipo</span><span class="tag tag-warn">7-may</span></div>
-      <div class="fk-task"><span>CRM conjunto actualizado semanal</span><span class="tag tag-warn">Decisión</span></div>
-      <div class="fk-task"><span>60 Community Points por persona</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-note">CRM existe pero <b>el equipo no lo actualiza</b> — decidir si seguir o cambiar.</div>
+    <div class="mta-st">
+      <div class="lbl">Tareas en mayo</div>
+      <div class="v">12</div>
+      <div class="ctx">8 áreas MTA cubiertas</div>
     </div>
-
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Innovation Strategy III</h4><div class="fk-lead">Lead TL · <b>Felipe / Garci</b></div></div>
-        <span class="tag tag-warn">Proceso</span>
-      </div>
-      <div class="fk-task"><span>Sharing innovación abierta + estrategia común</span><span class="tag tag-warn">Sólo sharing</span></div>
-      <div class="fk-task"><span>Reto innovación por proyecto</span><span class="tag tag-warn">Pendiente</span></div>
-      <div class="fk-note">Sharing hecho. Falta <b>estrategia común aplicada por proyecto</b>. Hito 26-may.</div>
-    </div>
-
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Personal Cultivation III</h4><div class="fk-lead">Lead Wellbeing · <b>María / Leire</b></div></div>
-        <span class="tag tag-warn">Mixto</span>
-      </div>
-      <div class="fk-task"><span>Rutinas bienestar + cuestionario salud mental</span><span class="tag tag-crit">Retrasado</span></div>
-      <div class="fk-task"><span>Economía del cuidado</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-task"><span>Privilegios + interseccionalidad</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-note">Falta <b>formulario de wellbeing</b> y entender el Workbook.</div>
-    </div>
-
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Empathy &amp; Diversity III</h4><div class="fk-lead">Lead Wellbeing · <b>Eli / Irati</b></div></div>
-        <span class="tag tag-warn">Proceso</span>
-      </div>
-      <div class="fk-task"><span>TS con E&amp;D Workbook + decolonialismo</span><span class="tag tag-warn">22-may</span></div>
-      <div class="fk-task"><span>Portfolios con compromiso impacto</span><span class="tag tag-warn">25-29 may</span></div>
-      <div class="fk-task"><span>Manifiesto evolucionado y compartido</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-note">Falta <b>2ª parte dinámica de etiquetas</b> y portfolios actualizados.</div>
-    </div>
-
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Leading Thoughts III</h4><div class="fk-lead">Lead PT · <b>María / Jonan / Jazha</b></div></div>
-        <span class="tag tag-crit">Sin empezar</span>
-      </div>
-      <div class="fk-task"><span>Dinámica proyectos ↔ Misión/Visión/Valores</span><span class="tag tag-warn">5-may</span></div>
-      <div class="fk-task"><span>Reflexión huella en Lab Bilbao</span><span class="tag tag-warn">12-may</span></div>
-      <div class="fk-task"><span>Evento comunidad cocreado</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-note">Las dos primeras <b>arrancan hoy/mañana</b> · conectan directo con Strategy Day puntos 1 y 4.</div>
-    </div>
-
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Learning Journey III</h4><div class="fk-lead">Lead · <b>Todos</b></div></div>
-        <span class="tag tag-good">Cerrado</span>
-      </div>
-      <div class="fk-note" style="border:0;padding:0;margin-top:8px">LJ a Korea cumplida. Generó dinámicas que aterrizaron en Falkon (decolonialismo, planning liderazgo, conversaciones difíciles).</div>
+    <div class="mta-st">
+      <div class="lbl">Evaluaciones</div>
+      <div class="v info">3-5 jun</div>
+      <div class="ctx"><b>21 días</b> desde hoy</div>
     </div>
   </div>
 
-  <h3 style="font-size:13px;font-weight:600;margin-bottom:10px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)">B · Empresa, finanzas y operaciones</h3>
-  <div class="fk-grid">
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Finanzas</h4><div class="fk-lead">Lead Finanzas · <b>Nerea / Pau / Jonan</b></div></div>
-        <span class="tag tag-crit">Retrasado</span>
+  <!-- Chronological timeline -->
+  <h3 class="mta-h">Cronología por tarea · mayo 2026</h3>
+  <div class="mta-tl">
+    <div class="mt-row mt-past">
+      <div class="mt-date"><span class="d">07</span><span class="m">may · jue</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">Estrategia de comunicación</div>
+        <span class="mt-area area-tp">Teampreunership &amp; Customer</span>
       </div>
-      <div class="fk-task"><span>Aprobar auditoría de mayo</span><span class="tag tag-crit">Retrasado</span></div>
-      <div class="fk-task"><span>Workshops finanzas para todo Rivia</span><span class="tag tag-crit">Retrasado</span></div>
-      <div class="fk-task"><span>Checks actualizados</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-task"><span>Panel de control + flujo de caja</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-note">Cuentas <b>2024 y 2025 sin revisar</b>. Desajuste Lock Burger pendiente. Sin workshops, equipo no defiende auditoría.</div>
+      <div class="mt-who">Pau · Kamu</div>
+      <div class="mt-status"><span class="tag tag-mute">Pasado · confirmar</span></div>
     </div>
 
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Teampreneurship &amp; Customer III</h4><div class="fk-lead">Lead PT+Finanzas · <b>Nerea / Andreas</b></div></div>
-        <span class="tag tag-warn">Proceso</span>
+    <div class="mt-row mt-past">
+      <div class="mt-date"><span class="d">12</span><span class="m">may · mar</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">Diamante y finanzas</div>
+        <span class="mt-area area-tp">Teampreunership &amp; Customer</span>
       </div>
-      <div class="fk-task"><span>Plan anual proyectos actualizado</span><span class="tag tag-warn">Proceso</span></div>
-      <div class="fk-task"><span>150 visitas/persona con post-motorola</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-note">90% del equipo &gt; 100 CV. Faltan <b>2 personas</b> ajustadas.</div>
+      <div class="mt-who">Nerea · Pau · Jonan</div>
+      <div class="mt-status"><span class="tag tag-mute">Pasado · confirmar</span></div>
     </div>
 
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Business Model Creation III</h4><div class="fk-lead">Lead PT · <b>Felipe / Iker</b></div></div>
-        <span class="tag tag-warn">Proceso</span>
+    <div class="mt-row mt-now">
+      <div class="mt-date"><span class="d">13</span><span class="m">may · mié</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">Estrategia de proyectos</div>
+        <span class="mt-area area-cm">Changemaking Experiments</span>
       </div>
-      <div class="fk-task"><span>BMC + viabilidad por proyecto</span><span class="tag tag-warn">5-12 may</span></div>
-      <div class="fk-task"><span>Diálogo roles en equipos efectivos</span><span class="tag tag-warn">18-22 may</span></div>
-      <div class="fk-note">Falta <b>BMC formalizado</b> y ponente externo de gestión.</div>
+      <div class="mt-who">Garci</div>
+      <div class="mt-status"><span class="tag tag-crit">Hoy</span></div>
     </div>
 
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Digital</h4><div class="fk-lead">Lead Digital · <b>Asecas / María</b></div></div>
-        <span class="tag tag-warn">Mixto</span>
+    <div class="mt-row mt-now">
+      <div class="mt-date"><span class="d">13</span><span class="m">may · mié</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">Diálogo en TS</div>
+        <span class="mt-area area-tc">Team Community Learning</span>
       </div>
-      <div class="fk-task"><span>Mini auditorías digitales por proyecto</span><span class="tag tag-warn">→ 6-jul</span></div>
-      <div class="fk-task"><span>CRM centralizador LJ</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-task"><span>Tracking TMT</span><span class="tag tag-warn">→ 6-may</span></div>
-      <div class="fk-task"><span>Auditorías web</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-note">CRM creado pero el equipo no lo actualiza. <b>Decidir herramienta</b>.</div>
+      <div class="mt-who">Jazha</div>
+      <div class="mt-status"><span class="tag tag-crit">Hoy</span></div>
     </div>
 
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Branding &amp; Communication</h4><div class="fk-lead">Lead Communication · <b>Pau / Jazha</b></div></div>
-        <span class="tag tag-warn">Proceso</span>
+    <div class="mt-row">
+      <div class="mt-date"><span class="d">14</span><span class="m">may · jue</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">Manifesto Empathy &amp; Diversity</div>
+        <span class="mt-area area-ed">Empathy &amp; Diversity</span>
       </div>
-      <div class="fk-task"><span>Firmas mail individuales y proyecto</span><span class="tag tag-good">Hecho</span></div>
-      <div class="fk-task"><span>+500 contactos LinkedIn (todos)</span><span class="tag tag-warn">Proceso</span></div>
-      <div class="fk-task"><span>Communication strategy + plan marketing</span><span class="tag tag-warn">→ 31-may</span></div>
-      <div class="fk-task"><span>Curso especializado por sector</span><span class="tag tag-crit">Por hacer</span></div>
-      <div class="fk-note">Manuales de marca aplicados. <b>Palanca clave para subir conversión comercial</b>.</div>
+      <div class="mt-who">Irati · Elisa</div>
+      <div class="mt-status"><span class="tag tag-warn">Mañana · Training</span></div>
     </div>
 
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Design Thinking III</h4><div class="fk-lead">Lead Digital · <b>Pau / Leire</b></div></div>
-        <span class="tag tag-good">Hecho</span>
+    <div class="mt-row">
+      <div class="mt-date"><span class="d">15</span><span class="m">may · vie</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">Innovación</div>
+        <span class="mt-area area-in">Innovation Strategy</span>
       </div>
-      <div class="fk-note" style="border:0;padding:0;margin-top:8px">Taller de design thinking impartido en TS · 31 marzo. Cerrado.</div>
+      <div class="mt-who">Andreas · Pau</div>
+      <div class="mt-status"><span class="tag tag-info">Programado</span></div>
     </div>
 
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Start Up Creation</h4><div class="fk-lead">Lead Digital · <b>Jonan / Garci</b></div></div>
-        <span class="tag tag-mute">Sin plan</span>
+    <div class="mt-row">
+      <div class="mt-date"><span class="d">17</span><span class="m">may · dom</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">Forms essays · 1ª revisión</div>
+        <span class="mt-area area-sd">Self Driven Learning</span>
       </div>
-      <div class="fk-note" style="border:0;padding:0;margin-top:8px">Líderes asignados. <b>Plan de tareas no detallado</b>. Pendiente aterrizar.</div>
+      <div class="mt-who">Jonan</div>
+      <div class="mt-status"><span class="tag tag-info">Programado</span></div>
     </div>
 
-    <div class="fk">
-      <div class="fk-h">
-        <div><h4>Legal</h4><div class="fk-lead">Lead Legal · <b>Andreas / Irati</b></div></div>
-        <span class="tag tag-mute">Sin plan</span>
+    <div class="mt-row">
+      <div class="mt-date"><span class="d">19</span><span class="m">may · mar</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">Estrategia clientes</div>
+        <span class="mt-area area-tp">Teampreunership &amp; Customer</span>
       </div>
-      <div class="fk-note" style="border:0;padding:0;margin-top:8px">Líderes asignados. <b>Plan de tareas no detallado</b>. Pendiente aterrizar.</div>
+      <div class="mt-who">Andreas · Garci · Jazha</div>
+      <div class="mt-status"><span class="tag tag-info">Training</span></div>
+    </div>
+
+    <div class="mt-row">
+      <div class="mt-date"><span class="d">20</span><span class="m">may · mié</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">Storyboard</div>
+        <span class="mt-area area-bc">Branding &amp; Communication</span>
+      </div>
+      <div class="mt-who">Communication · Elisa</div>
+      <div class="mt-status"><span class="tag tag-info">Programado</span></div>
+    </div>
+
+    <div class="mt-row">
+      <div class="mt-date"><span class="d">21</span><span class="m">may · jue</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">ODS</div>
+        <span class="mt-area area-cm">Changemaking Experiments</span>
+      </div>
+      <div class="mt-who">Kamu</div>
+      <div class="mt-status"><span class="tag tag-info">Training</span></div>
+    </div>
+
+    <div class="mt-row">
+      <div class="mt-date"><span class="d">26</span><span class="m">may · mar</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">LP cultura de trabajo y diálogo</div>
+        <span class="mt-area area-cm">Changemaking Experiments</span>
+      </div>
+      <div class="mt-who">Leire · María</div>
+      <div class="mt-status"><span class="tag tag-info">Training</span></div>
+    </div>
+
+    <div class="mt-row">
+      <div class="mt-date"><span class="d">31</span><span class="m">may · dom</span></div>
+      <div class="mt-task">
+        <div class="mt-tn">Forms essays · 2ª revisión</div>
+        <span class="mt-area area-sd">Self Driven Learning</span>
+      </div>
+      <div class="mt-who">Jonan</div>
+      <div class="mt-status"><span class="tag tag-warn">Cierre</span></div>
+    </div>
+  </div>
+
+  <!-- Analysis -->
+  <div class="mta-analysis">
+    <h3>Análisis · cuánto queda por cumplir</h3>
+    <div class="ana-grid">
+      <div class="ana">
+        <div class="ana-lbl">Ejecutado / total</div>
+        <div class="ana-v">2 / 12</div>
+        <div class="ana-bar"><div class="ana-fl" style="width:17%"></div></div>
+        <div class="ana-pct">17% · a confirmar</div>
+      </div>
+      <div class="ana">
+        <div class="ana-lbl">Pendiente en mayo</div>
+        <div class="ana-v">10 tareas</div>
+        <div class="ana-bar"><div class="ana-fl warn" style="width:83%"></div></div>
+        <div class="ana-pct">83%</div>
+      </div>
+      <div class="ana">
+        <div class="ana-lbl">Cargadas en Training</div>
+        <div class="ana-v">5 tareas</div>
+        <div class="ana-ctx">14·19·21·26 · una por sesión</div>
+      </div>
+      <div class="ana">
+        <div class="ana-lbl">Fuera de Training</div>
+        <div class="ana-v">5 tareas</div>
+        <div class="ana-ctx">15·17·20·31 + 28-may sin agendar</div>
+      </div>
+    </div>
+    <div class="ana-note">
+      A 13-may sólo <b>2 de las 12 tareas</b> de mayo se asumen ejecutadas (07-may Estrategia de comunicación, 12-may Diamante y finanzas) y <b>requieren confirmación antes del Strategy Day</b>. Las 10 restantes se reparten entre 5 Training (mar/jue) y 5 espacios fuera de Training. El <b>28-may queda como colchón sin tarea asignada</b> — único margen real para recuperar si algo se atrasa.
     </div>
   </div>
 </section>
 
-<!-- ===== 07 FALKON SEGUNDO (DEUDA) ===== -->
+<!-- ===== 07 MTA MODEL TERCERO ===== -->
 <section>
   <div class="s-head">
     <span class="s-num">07</span>
-    <h2 class="s-title">Falkon Segundo — <em>deuda académica del año anterior</em></h2>
-    <span class="s-aside">Sprint final 4-may → 4-jun<br>17 frentes abiertos</span>
+    <h2 class="s-title">MTA Model Tercero — <em>indicadores del 3<sup>er</sup> curso</em></h2>
+    <span class="s-aside">11 indicadores · cierre 31 may<br>Eval 3-5 jun</span>
   </div>
 
-  <div class="fs-cat">
-    <div class="fs-cat-h">
-      <h4>Estrategia de comunicación y marca</h4>
-      <span class="ct">verde · 6 ítems</span>
+  <!-- Stats overview -->
+  <div class="mta-stats">
+    <div class="mta-st">
+      <div class="lbl">Cerrados</div>
+      <div class="v good">3</div>
+      <div class="ctx">TCL · IS · PC · <b>27%</b></div>
     </div>
-    <div class="fs-list">
-      <div class="fs-it"><div class="it-l"><b>Communication Strategy</b> presentada por proyecto</div><div class="it-w">Jazha · Paula</div></div>
-      <div class="fs-it"><div class="it-l">Plan de escalabilidad por equipo</div><div class="it-w">Cada equipo</div></div>
-      <div class="fs-it"><div class="it-l">Mejorar gestión externa online y offline</div><div class="it-w">Communication</div></div>
-      <div class="fs-it"><div class="it-l">Branding y marcas propias por proyecto</div><div class="it-w">Cada equipo</div></div>
-      <div class="fs-it"><div class="it-l">Plan de especialización sectorial</div><div class="it-w">Cada equipo</div></div>
-      <div class="fs-it"><div class="it-l">Espacio de aprendizaje en strategy</div><div class="it-w">Paula · Jazha · Oier</div></div>
+    <div class="mta-st">
+      <div class="lbl">En proceso</div>
+      <div class="v warn">7</div>
+      <div class="ctx">Cierre en mayo · <b>64%</b></div>
     </div>
-  </div>
-
-  <div class="fs-cat">
-    <div class="fs-cat-h">
-      <h4>Calidad de contenido y storytelling</h4>
-      <span class="ct">amarillo · 2 ítems</span>
+    <div class="mta-st">
+      <div class="lbl">Suspendido</div>
+      <div class="v crit">1</div>
+      <div class="ctx">Finanzas · <b>plan urgente</b></div>
     </div>
-    <div class="fs-list">
-      <div class="fs-it"><div class="it-l">Sistema de feedback de essays · formulario</div><div class="it-w">Por asignar</div></div>
-      <div class="fs-it"><div class="it-l">Pitch + storytelling para clientes y jurados</div><div class="it-w">Todos</div></div>
-    </div>
-  </div>
-
-  <div class="fs-cat">
-    <div class="fs-cat-h">
-      <h4>Estrategia de proyectos y negocio</h4>
-      <span class="ct">núcleo · 4 ítems</span>
-    </div>
-    <div class="fs-list">
-      <div class="fs-it"><div class="it-l">Estrategia y proceso global de proyectos</div><div class="it-w">PT</div></div>
-      <div class="fs-it"><div class="it-l">Espacio técnico de modelo de negocio · 1ª TS Korea</div><div class="it-w">Felipe · Iker</div></div>
-      <div class="fs-it"><div class="it-l">Diálogo sobre roles en equipos · 4-may</div><div class="it-w">Garci · Iker · Felipe</div></div>
-      <div class="fs-it"><div class="it-l">Definir procesos de innovación</div><div class="it-w">Andreas · Paula</div></div>
+    <div class="mta-st">
+      <div class="lbl">Vía de cierre clara</div>
+      <div class="v info">10/11</div>
+      <div class="ctx">91% con accionables · 1 crítico</div>
     </div>
   </div>
 
-  <div class="fs-cat">
-    <div class="fs-cat-h">
-      <h4>Cultura, impacto y metodología</h4>
-      <span class="ct">núcleo · 4 ítems</span>
+  <!-- Grid of 11 indicators -->
+  <h3 class="mta-h">Indicadores · estado y vía de cierre</h3>
+  <div class="fk-grid">
+
+    <!-- 01 Self Driven Learning -->
+    <div class="fk">
+      <div class="fk-h">
+        <div><h4>01 · Self Driven Learning</h4><div class="fk-lead">Owner · <b>Nerea / Iker</b></div></div>
+        <span class="tag tag-warn">En proceso</span>
+      </div>
+      <div class="fk-task"><span>Portfolio profesional individual</span><span class="tag tag-crit">Retrasado · 7-may</span></div>
+      <div class="fk-task"><span>120 LP aplicados a proyectos</span><span class="tag tag-warn">Proceso · 31-may</span></div>
+      <div class="fk-task"><span>Individual Learning Contract reenfocado</span><span class="tag tag-crit">Retrasado · 11-may</span></div>
+      <div class="fk-note">Media equipo <b>109 BP</b>. Top: Jazha 126, Andreas 122, Felipe 117. <b>ILC se rehace tras Strategy Day</b>; portfolio requiere reunión con mentor.</div>
     </div>
-    <div class="fs-list">
-      <div class="fs-it"><div class="it-l">LP cultura de trabajo · justificar con datos</div><div class="it-w">Leire · María</div></div>
-      <div class="fs-it"><div class="it-l">Empathy &amp; Diversity puesta en práctica · LJ</div><div class="it-w">Elisa · Irati</div></div>
-      <div class="fs-it"><div class="it-l">Modelo Nonaka-Takeuchi + Double Loop · Hackathon</div><div class="it-w">Sharings + equipo</div></div>
-      <div class="fs-it"><div class="it-l">Integrar ODS en communication strategy de cada proyecto</div><div class="it-w">Cada equipo</div></div>
+
+    <!-- 02 Cooperative Leadership -->
+    <div class="fk">
+      <div class="fk-h">
+        <div><h4>02 · Cooperative Leadership</h4><div class="fk-lead">Owner · <b>Irati / Oier</b></div></div>
+        <span class="tag tag-info">Cierra mañana</span>
+      </div>
+      <div class="fk-task"><span>Objetivos proyecto ↔ visión empresa</span><span class="tag tag-warn">En peligro · 31-may</span></div>
+      <div class="fk-task"><span>Cada miembro lidera un proceso</span><span class="tag tag-crit">Retrasado · 31-may</span></div>
+      <div class="fk-task"><span>Reflexión evolución de liderazgos</span><span class="tag tag-good">Hecho · 29-ene</span></div>
+      <div class="fk-note">Cierra el <b>14-may en Strategy Day</b> con accionables. Herramienta común optimizada · planning de liderazgo por persona <b>cerrado en Korea</b>.</div>
     </div>
+
+    <!-- 03 Team Community Learning -->
+    <div class="fk">
+      <div class="fk-h">
+        <div><h4>03 · Team Community Learning</h4><div class="fk-lead">Owner · <b>Kamu / Eli</b></div></div>
+        <span class="tag tag-good">Completado</span>
+      </div>
+      <div class="fk-task"><span>Repositorio Drive presentado al equipo</span><span class="tag tag-good">Hecho · 7-may</span></div>
+      <div class="fk-task"><span>CRM conjunto actualizado semanal</span><span class="tag tag-warn">Decidir herramienta</span></div>
+      <div class="fk-task"><span>60 Community Points por persona</span><span class="tag tag-good">100% cumplido</span></div>
+      <div class="fk-note">Indicador validado en su conjunto. CRM creado pero <b>no se actualiza</b> — decisión pendiente: seguir o cambiar herramienta.</div>
+    </div>
+
+    <!-- 04 Innovation Strategy -->
+    <div class="fk">
+      <div class="fk-h">
+        <div><h4>04 · Innovation Strategy</h4><div class="fk-lead">Owner · <b>Felipe / Garci</b></div></div>
+        <span class="tag tag-good">Completado · revisar</span>
+      </div>
+      <div class="fk-task"><span>Sharing innovación abierta</span><span class="tag tag-good">Hecho · 9-abr</span></div>
+      <div class="fk-task"><span>Reto innovación por proyecto</span><span class="tag tag-warn">→ 26-may</span></div>
+      <div class="fk-note">Validado a falta de revisión. Hito clave: <b>dinámica innovación abierta 26-may</b> con clientes y expertos en TS.</div>
+    </div>
+
+    <!-- 05 Branding & Communication -->
+    <div class="fk">
+      <div class="fk-h">
+        <div><h4>05 · Branding &amp; Communication</h4><div class="fk-lead">Owner · <b>Pau / Jazha</b></div></div>
+        <span class="tag tag-warn">Condicionado</span>
+      </div>
+      <div class="fk-task"><span>Firmas mail individuales y proyecto</span><span class="tag tag-good">Hecho · 10-abr</span></div>
+      <div class="fk-task"><span>+500 contactos LinkedIn (todos)</span><span class="tag tag-warn">En proceso</span></div>
+      <div class="fk-task"><span>Communication Strategy + plan marketing</span><span class="tag tag-warn">→ 31-may</span></div>
+      <div class="fk-task"><span>Curso especializado por proyecto</span><span class="tag tag-crit">Por hacer · 2 sem</span></div>
+      <div class="fk-note">Aprobación condicionada a Communication Strategy completa. <b>El curso por proyecto es la palanca</b> para cerrar el indicador.</div>
+    </div>
+
+    <!-- 06 Personal Cultivation -->
+    <div class="fk">
+      <div class="fk-h">
+        <div><h4>06 · Personal Cultivation</h4><div class="fk-lead">Owner · <b>María / Leire</b></div></div>
+        <span class="tag tag-good">Completado</span>
+      </div>
+      <div class="fk-task"><span>Rutinas + cuestionario salud mental + sharing IE</span><span class="tag tag-warn">Retrasado · 13-abr</span></div>
+      <div class="fk-task"><span>Economía del cuidado</span><span class="tag tag-good">Hecho · 30-abr</span></div>
+      <div class="fk-task"><span>Privilegios + interseccionalidad</span><span class="tag tag-good">Hecho · 9-abr</span></div>
+      <div class="fk-note">Indicador dado por <b>completado</b>. Falta cerrar formalmente el <b>formulario de wellbeing</b> y el Workbook como cierre.</div>
+    </div>
+
+    <!-- 07 Empathy and Diversity -->
+    <div class="fk">
+      <div class="fk-h">
+        <div><h4>07 · Empathy and Diversity</h4><div class="fk-lead">Owner · <b>Eli / Irati</b></div></div>
+        <span class="tag tag-warn">Aprobación proyectada</span>
+      </div>
+      <div class="fk-task"><span>TS con E&amp;D Workbook + decolonialismo</span><span class="tag tag-warn">22-may</span></div>
+      <div class="fk-task"><span>Portfolios con compromiso impacto</span><span class="tag tag-warn">25-29 may</span></div>
+      <div class="fk-task"><span>Manifiesto evolucionado y compartido</span><span class="tag tag-good">Hecho · 8-may</span></div>
+      <div class="fk-note">Aprueba al validar <b>Workbook + taller Design Thinking</b>. Falta 2ª parte dinámica etiquetas y actualizar portfolios.</div>
+    </div>
+
+    <!-- 08 Finanzas -->
+    <div class="fk">
+      <div class="fk-h">
+        <div><h4>08 · Finanzas</h4><div class="fk-lead">Owner · <b>Nerea / Pau / Jonan</b></div></div>
+        <span class="tag tag-crit">Suspendido</span>
+      </div>
+      <div class="fk-task"><span>Aprobar auditoría de mayo</span><span class="tag tag-crit">Retrasado · 1-may</span></div>
+      <div class="fk-task"><span>Workshops finanzas para todo Rivia</span><span class="tag tag-crit">Retrasado · 4-may</span></div>
+      <div class="fk-task"><span>Checks actualizados</span><span class="tag tag-good">Hecho · 20-mar</span></div>
+      <div class="fk-task"><span>Panel de control + flujo de caja</span><span class="tag tag-good">Hecho</span></div>
+      <div class="fk-note">Único indicador <b>suspendido</b>. Balance 2024-25 sin hacer · desajuste Lock Burger sin resolver · workshops sin impartir. <b>Plan de contingencia inmediato.</b></div>
+    </div>
+
+    <!-- Leading Thoughts -->
+    <div class="fk">
+      <div class="fk-h">
+        <div><h4>· Leading Thoughts III</h4><div class="fk-lead">Owner · <b>María / Jonan / Jazha</b></div></div>
+        <span class="tag tag-crit">Arranca esta sem.</span>
+      </div>
+      <div class="fk-task"><span>Misión/Visión/Valores ↔ proyectos</span><span class="tag tag-crit">Sin empezar · 14-may</span></div>
+      <div class="fk-task"><span>Reflexión huella en Lab Bilbao</span><span class="tag tag-warn">12-may</span></div>
+      <div class="fk-task"><span>Evento comunidad cocreado</span><span class="tag tag-good">Completado</span></div>
+      <div class="fk-note">Dos sub-tareas <b>arrancan en Strategy Day mañana</b>. Conecta directo con puntos 1 y 4 de la sesión.</div>
+    </div>
+
+    <!-- Teampreunership & Customer -->
+    <div class="fk">
+      <div class="fk-h">
+        <div><h4>· Teampreunership &amp; Customer III</h4><div class="fk-lead">Owner · <b>Nerea / Andreas</b></div></div>
+        <span class="tag tag-warn">En proceso</span>
+      </div>
+      <div class="fk-task"><span>Plan anual proyectos actualizado</span><span class="tag tag-warn">Proceso · 13-abr</span></div>
+      <div class="fk-task"><span>150 visitas / 100 CV por persona</span><span class="tag tag-good">90% equipo &gt; 100 CV</span></div>
+      <div class="fk-note">Faltan <b>2 personas</b> en CVs · ajuste rápido. Plan anual se valida en Strategy Day.</div>
+    </div>
+
+    <!-- Business Model Creation -->
+    <div class="fk">
+      <div class="fk-h">
+        <div><h4>· Business Model Creation III</h4><div class="fk-lead">Owner · <b>Felipe / Iker</b></div></div>
+        <span class="tag tag-warn">En proceso</span>
+      </div>
+      <div class="fk-task"><span>BMC + viabilidad por proyecto</span><span class="tag tag-warn">5 → 12 may</span></div>
+      <div class="fk-task"><span>Diálogo roles en equipos efectivos</span><span class="tag tag-warn">18-22 may</span></div>
+      <div class="fk-note">Falta <b>BMC formalizado</b> por proyecto y <b>ponente externo</b> de gestión de equipo. Aterriza tras Strategy Day y siguiente TS.</div>
+    </div>
+
   </div>
 
-  <div class="fs-cat">
-    <div class="fs-cat-h">
-      <h4>Clientes y relaciones externas</h4>
-      <span class="ct">2 ítems</span>
+  <!-- Analysis -->
+  <div class="mta-analysis">
+    <h3>Análisis · vía de cierre por indicador</h3>
+    <div class="ana-rows">
+      <div class="ana-row good">
+        <span class="ana-lab">Cerrados</span>
+        <span class="ana-v">3</span>
+        <span class="ana-list">Team Community Learning · Innovation Strategy · Personal Cultivation</span>
+      </div>
+      <div class="ana-row info">
+        <span class="ana-lab">Cierran en Strategy Day</span>
+        <span class="ana-v">1</span>
+        <span class="ana-list">Cooperative Leadership · accionables del 14-may</span>
+      </div>
+      <div class="ana-row warn">
+        <span class="ana-lab">Cierran en mayo · condicionado</span>
+        <span class="ana-v">6</span>
+        <span class="ana-list">Self Driven Learning · Branding &amp; Communication · Empathy &amp; Diversity · Leading Thoughts · Teampreunership · Business Model Creation</span>
+      </div>
+      <div class="ana-row crit">
+        <span class="ana-lab">Suspendido · plan urgente</span>
+        <span class="ana-v">1</span>
+        <span class="ana-list">Finanzas · auditoría + workshops + ajuste Lock Burger</span>
+      </div>
     </div>
-    <div class="fs-list">
-      <div class="fs-it"><div class="it-l">Plan de continuidad para clientes antiguos</div><div class="it-w">Garci · Jazha · Andreas</div></div>
-      <div class="fs-it"><div class="it-l">Sectores de interés + colaboración con agentes externos</div><div class="it-w">PT</div></div>
-    </div>
-  </div>
-
-  <div class="fs-cat">
-    <div class="fs-cat-h">
-      <h4>Operaciones y finanzas</h4>
-      <span class="ct">3 ítems</span>
-    </div>
-    <div class="fs-list">
-      <div class="fs-it"><div class="it-l">Aprobar la auditoría de finanzas</div><div class="it-w">Finanzas</div></div>
-      <div class="fs-it"><div class="it-l">Revisión financiera con asesores externos</div><div class="it-w">Finanzas</div></div>
-      <div class="fs-it"><div class="it-l">Evolución y seguimiento tras 100 CVs alcanzadas</div><div class="it-w">Comunidad</div></div>
+    <div class="ana-note">
+      <b>27% cerrado</b> a 13-may. El <b>64% restante</b> (7 indicadores) tiene vía de cierre clara apoyada en los 5 Training (14·19·21·26·28), el <b>MVP TMT del 20-may</b> y la <b>dinámica de innovación abierta del 26-may</b>. <b>Finanzas requiere plan de contingencia inmediato</b> · no se cierra por el camino normal de Training y exige una acción extraordinaria del equipo Finanzas + sesión asesor externo antes del 31-may.
     </div>
   </div>
 </section>
@@ -916,7 +1109,7 @@ footer b{color:var(--ink);font-weight:500}
     <div class="q"><div class="qn">04</div><div class="qt">¿Cómo cubrimos la tesorería en <b>las próximas 2 semanas</b> — qué cobros aceleramos, qué pagos negociamos, qué facturación inmediata activamos?</div></div>
     <div class="q"><div class="qn">05</div><div class="qt">¿<b>Paula y Jonan</b> se incorporan a un TMT existente o lanzamos un sexto?</div></div>
     <div class="q"><div class="qn">06</div><div class="qt">¿Cómo aseguramos que los TMT sean <b>diseño escalable</b> y no operación manual? (3 horizontes · Double Loop · salir del edificio)</div></div>
-    <div class="q"><div class="qn">07</div><div class="qt">¿Qué <b>deudas del Falkon Segundo</b> priorizamos cerrar antes del 4 de junio y cuáles aceptamos no cerrar?</div></div>
+    <div class="q"><div class="qn">07</div><div class="qt">¿Qué <b>tareas del MTA Model Segundo</b> priorizamos cerrar antes del 31-may y cuáles aceptamos no cerrar?</div></div>
     <div class="q"><div class="qn">08</div><div class="qt">¿Cómo aseguramos la <b>auditoría de mayo</b> — quién hace el balance 2024-25, quién imparte los workshops, qué fecha cerramos?</div></div>
     <div class="q"><div class="qn">09</div><div class="qt">¿Qué medimos cada Tracking de mayo (12·21·28) para que <b>no se repita el patrón</b> "se decide pero no se sigue"?</div></div>
     <div class="q"><div class="qn">10</div><div class="qt">¿Qué <b>objetivo único</b> de Rivia 2027 nos haría sentir orgullosos más allá de los checks del Diamante?</div></div>
