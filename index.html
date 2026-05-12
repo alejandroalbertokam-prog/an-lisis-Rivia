@@ -338,9 +338,9 @@ footer b{color:var(--ink);font-weight:500}
 
   <div class="kpi">
     <div class="k">
-      <div class="lbl">Caja al 06 mayo</div>
-      <div class="v crit">932€</div>
-      <div class="ctx">Pasivos pendientes <b>2.036€</b></div>
+      <div class="lbl">Caja al 13 mayo</div>
+      <div class="v warn">601€</div>
+      <div class="ctx">Cierre día proyectado <b>1.113€</b></div>
     </div>
     <div class="k">
       <div class="lbl">Facturación equipo</div>
@@ -390,10 +390,10 @@ footer b{color:var(--ink);font-weight:500}
 
   <div class="alerts">
     <div class="al">
-      <span class="pill pill-crit">Caja</span>
-      <div class="num crit">−1.104€</div>
-      <h4>Liquidez en zona roja</h4>
-      <p>1.482€ disponibles vs 2.586€ comprometidos esta semana. Sin entradas previstas, las cuentas no cuadran.</p>
+      <span class="pill pill-warn">Caja</span>
+      <div class="num">+512€</div>
+      <h4>Recuperación · horizonte plano</h4>
+      <p>Día +1.513€ ingresos / −1.000€ gastos. Cierra en 1.113€ pero <b>0€ previstos del 14 al 20 may</b>. Sin nuevas entradas, sin margen para imprevistos.</p>
     </div>
     <div class="al">
       <span class="pill pill-crit">Comercial</span>
@@ -441,30 +441,31 @@ footer b{color:var(--ink);font-weight:500}
   <div class="s-head">
     <span class="s-num">04</span>
     <h2 class="s-title">Finanzas — <em>caja, brecha y reparto</em></h2>
-    <span class="s-aside">Datos al 4 mayo<br>167.142€ acumulados</span>
+    <span class="s-aside">Datos al 13 mayo<br>167.142€ acumulados</span>
   </div>
 
   <!-- Cash flow -->
   <div class="cash">
     <div class="cash-head">
       <div>
-        <h3>Flujo de caja · 04–08 mayo</h3>
-        <p>Sin entradas previstas, el equipo se queda sin margen operativo en 24 h.</p>
+        <h3>Flujo de caja · 11–20 mayo</h3>
+        <p>Caja recuperándose con cobros de hoy, pero <b>sin ingresos proyectados del 14 al 20 may</b>.</p>
       </div>
-      <span class="tag tag-crit">Acción urgente</span>
+      <span class="tag tag-warn">Horizonte plano</span>
     </div>
-    <div class="cash-row">
-      <div class="cash-c"><div class="day">04 MAY</div><div class="amt">2.935€</div><div class="sub">Cuenta inicio</div></div>
-      <div class="cash-c"><div class="day">05 MAY</div><div class="amt crit">1.482€</div><div class="sub">Tras gastos hoy</div></div>
-      <div class="cash-c"><div class="day">06 MAY</div><div class="amt crit">932€</div><div class="sub">Tras alquiler LB</div></div>
-      <div class="cash-c"><div class="day">07 MAY</div><div class="amt crit">932€</div><div class="sub">Sin ingresos</div></div>
-      <div class="cash-c"><div class="day">08 MAY</div><div class="amt crit">932€</div><div class="sub">Sin ingresos</div></div>
+    <div class="cash-row" style="grid-template-columns:repeat(6,1fr)">
+      <div class="cash-c"><div class="day">11 MAY</div><div class="amt">747€</div><div class="sub">+380€ ingresos</div></div>
+      <div class="cash-c"><div class="day">12 MAY</div><div class="amt warn" style="color:var(--warn)">601€</div><div class="sub">−348€ gastos</div></div>
+      <div class="cash-c" style="background:var(--info-bg)"><div class="day" style="color:var(--info);font-weight:600">13 MAY · HOY</div><div class="amt" style="color:var(--info)">1.113€</div><div class="sub">+1.513€ / −1.000€</div></div>
+      <div class="cash-c"><div class="day">14 MAY · SD</div><div class="amt">1.113€</div><div class="sub">Sin movimiento</div></div>
+      <div class="cash-c"><div class="day">15-18 MAY</div><div class="amt">1.113€</div><div class="sub">Plano · 0€</div></div>
+      <div class="cash-c"><div class="day">19-20 MAY</div><div class="amt">1.113€</div><div class="sub">Plano · 0€</div></div>
     </div>
-    <div class="cash-pend">
-      <span>Garci · 300€</span>
-      <span>Oier · 200€</span>
-      <span>Quaroo · 1.536,70€</span>
-      <span>Total pasivo · 2.036€</span>
+    <div class="cash-pend" style="background:transparent">
+      <span style="background:var(--good-bg);color:var(--good)">Hoy · ingresos +1.513€</span>
+      <span style="background:var(--crit-bg);color:var(--crit)">Hoy · gastos −1.000€</span>
+      <span style="background:var(--good-bg);color:var(--good)">Neto del día · +512€</span>
+      <span style="background:var(--warn-bg);color:var(--warn)">14–20 may · 0€ ingresos</span>
     </div>
   </div>
 
@@ -525,7 +526,7 @@ footer b{color:var(--ink);font-weight:500}
     <div class="bar"><div class="nm">María</div><div class="tk"><div class="fl under" style="width:38%"></div><div class="tgt" style="left:75%"></div></div><div class="vl">2.875€</div></div>
     <div class="bar"><div class="nm">Jazhael</div><div class="tk"><div class="fl under" style="width:38%"></div><div class="tgt" style="left:75%"></div></div><div class="vl">2.866€</div></div>
     <div class="bars-foot">
-      Solo <b>4 personas</b> superan el objetivo de junio (4.500€). Los 14 cierran si el equipo suma <b>~21.400€</b> de margen adicional en 27 días — un 36% más que lo acumulado en 8 meses. Felipe lidera facturación (19.266€) pero margen sólo 15% — modelo intensivo en costes a revisar.
+      Solo <b>4 personas</b> superan el objetivo de junio (4.500€). Los 14 cierran si el equipo suma <b>~21.400€</b> de margen adicional en 18 días — un 36% más que lo acumulado en 8 meses. Felipe lidera facturación (19.266€) pero margen sólo 15% — modelo intensivo en costes a revisar.
     </div>
   </div>
 </section>
@@ -1060,7 +1061,7 @@ footer b{color:var(--ink);font-weight:500}
       <h4>Debilidades</h4>
       <div class="sw-sub">Lo que está roto</div>
       <ul>
-        <li><b>Caja en mínimo crítico</b>: 932€ vs 2.036€ pasivos pendientes</li>
+        <li><b>Caja recuperándose pero plana</b>: 1.113€ tras hoy · 0€ ingresos previstos hasta el 20-may</li>
         <li><b>Conversión 1,5%</b> — propuesta de valor no genera necesidad de pago</li>
         <li>Falta de recurrencia: los proyectos no escalan solos</li>
         <li>Auditoría retrasada · 2 ejercicios sin revisar · workshops sin hacer</li>
@@ -1084,11 +1085,11 @@ footer b{color:var(--ink);font-weight:500}
       <h4>Amenazas</h4>
       <div class="sw-sub">Si no actuamos en mayo</div>
       <ul>
-        <li>Caja insuficiente para sostener operación sin facturación inmediata</li>
+        <li>Caja plana 14-20 may · sin nuevos cobros, primer imprevisto reabre el agujero</li>
         <li>Auditoría no aprobada → riesgo académico al cierre del 3<sup>er</sup> curso</li>
         <li>MVP TMT precipitado el 20-may → jurado lo rechaza el 25</li>
         <li>Sin sostenibilidad, los proyectos llegan a 4º como facturación rápida</li>
-        <li>10 personas necesitan +1.000€ margen en 27 días</li>
+        <li>10 personas necesitan +1.000€ margen en 18 días</li>
         <li>Cuestionar todo sin priorizar puede paralizar la ejecución</li>
       </ul>
     </div>
@@ -1106,7 +1107,7 @@ footer b{color:var(--ink);font-weight:500}
     <div class="q"><div class="qn">01</div><div class="qt">¿Qué hacemos con <b>Secreto</b> para que sea económicamente sostenible — pivotamos modelo, renegociamos costes o lo cerramos?</div></div>
     <div class="q"><div class="qn">02</div><div class="qt">¿Qué tienen en común los <b>3 cierres</b> frente a las <b>197 propuestas perdidas</b>? ¿Quién es nuestro cliente y qué necesidad sí cubrimos?</div></div>
     <div class="q"><div class="qn">03</div><div class="qt">¿Cómo <b>replicamos el modelo IA Pyme</b> (97% margen) en los demás proyectos?</div></div>
-    <div class="q"><div class="qn">04</div><div class="qt">¿Cómo cubrimos la tesorería en <b>las próximas 2 semanas</b> — qué cobros aceleramos, qué pagos negociamos, qué facturación inmediata activamos?</div></div>
+    <div class="q"><div class="qn">04</div><div class="qt">¿Cómo activamos <b>entradas entre el 14 y el 20 may</b> para no llegar al MVP del TMT con 1.113€ y ningún cobro pendiente?</div></div>
     <div class="q"><div class="qn">05</div><div class="qt">¿<b>Paula y Jonan</b> se incorporan a un TMT existente o lanzamos un sexto?</div></div>
     <div class="q"><div class="qn">06</div><div class="qt">¿Cómo aseguramos que los TMT sean <b>diseño escalable</b> y no operación manual? (3 horizontes · Double Loop · salir del edificio)</div></div>
     <div class="q"><div class="qn">07</div><div class="qt">¿Qué <b>tareas del MTA Model Segundo</b> priorizamos cerrar antes del 31-may y cuáles aceptamos no cerrar?</div></div>
